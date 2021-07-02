@@ -53,3 +53,22 @@ class patient(models.Model):
     Creator = models.ForeignKey(User,on_delete= models.CASCADE)
     def __str__(self):
         return f"{ self.Name}"
+class test(models.Model):
+    Patient = models.ForeignKey(patient,on_delete= models.CASCADE,blank= True)
+    Test = models.CharField(max_length= 64)
+    Name = models.CharField(max_length= 64)
+    Date = models.DateField()
+    Active = models.BooleanField(default=True)
+    timestamp = models.TimeField()
+    location = models.ForeignKey(Location,on_delete= models.CASCADE,blank= True)
+    Creator = models.ForeignKey(User,on_delete= models.CASCADE)
+
+class medicine(models.Model):
+    Patient = models.ForeignKey(patient,on_delete= models.CASCADE,blank= True)
+    medicine = models.CharField(max_length= 64)
+    Name = models.CharField(max_length= 64)
+    Delivery = models.CharField(max_length=64)
+    location = models.ForeignKey(Location,on_delete= models.CASCADE,blank= True)
+    Date = models.DateField()
+    Active = models.BooleanField(default=True)
+    Creator = models.ForeignKey(User,on_delete= models.CASCADE)

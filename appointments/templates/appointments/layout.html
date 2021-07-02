@@ -48,10 +48,18 @@
               <li><a href="#">Drop Down 1</a></li>
               <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Book an appointment</a></li>
-                  <li><a href="#">Cancel the appointment</a></li>
-                  <li><a href="#">Book tests</a></li>
-                  <li><a href="#">Order medicine</a></li>
+                  <li><a href="{%url 'book'%}">Book an appointment</a></li>
+                  <li><a href="{%url 'book'%}">Cancel the appointment</a></li>
+                  <li><a href="{%url 'test'%}">Book tests</a></li>
+                  <li><a href="{%url 'med'%}">Order medicine</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Staff</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="{%url 'ftc'%}">for test centers</a></li>
+                  <li><a href="{%url 'fm'%}">for medicines</a></li>
+                  <li><a href="{%url 'fh'%}">for hospitals</a></li>
                 </ul>
               </li>
               

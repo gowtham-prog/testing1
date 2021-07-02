@@ -10,5 +10,11 @@ urlpatterns =[
  path("logout",views.logout_view,name="logout"),
  path("home",views.home,name="home"),
  path("cancel/<int:id>",views.cancel,name="cancel"),
- 
+ path("booktest",views.book_test, name= "test"),
+ path("bookmed",views.book_medicine, name= "med"),
+ path("canceltest/<int:id>",views.cancel_test, name= "canceltest"),
+ path("bookmed/<int:id>",views.cancel_med, name= "cancelmed"),
+ path("ftc",views.ftc, name= "ftc"),
+ path("fm",views.fm, name= "fm"),
+ path("fh",views.fh, name= "fh"),
 ]
